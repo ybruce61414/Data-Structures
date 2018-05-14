@@ -5,4 +5,4 @@
 > 3.   Doubly linked list
 > Here's some example code:
 > 
->      return "NO.%d: %s\tMath: %d\tEnglish: %d" % (self.no,self.name,self.math,self.eng); 
+>      return shell_exec("echo $input | $markdown_script");
