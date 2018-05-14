@@ -5,4 +5,4 @@
 > 
 > Here's some example code:
 > 
->     return shell_exec("echo $input | $markdown_script");
+>     return "NO.%d: %s\tMath: %d\tEnglish: %d" % (self.no,self.name,self.math,self.eng);
