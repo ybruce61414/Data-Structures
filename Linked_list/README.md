@@ -1,8 +1,8 @@
 > ## Linked List
 > 
-> 1.   Singly linked list
-> 2.   Circular linked list
-> 3.   Doubly linked list
+> 1.   This is the first list item.
+> 2.   This is the second list item.
+> 
 > Here's some example code:
 > 
->      return shell_exec("echo $input | $markdown_script");
+>     return shell_exec("echo $input | $markdown_script");
