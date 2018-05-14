@@ -1,7 +1,8 @@
 > ## Linked List
 > 
-> 1.   This is the first list item.
-> 2.   This is the second list item.
+> 1.   singly linked list
+> 2.   circular linked list 
+> 3.   doubly linked list
 > 
 > Here's some example code:
 > 
