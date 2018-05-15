@@ -1,6 +1,6 @@
 > ## What is a linked list?
 >
-> Linked list is a linear data structure where each element is a separate object consistong of group of nodes in a sequence.
+> 	Linked list is a linear data structure where each element is a separate object consistong of group of nodes in a sequence.
 >
 > 1.   singly linked list        
 > 2.   circular linked list 
