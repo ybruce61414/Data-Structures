@@ -4,7 +4,7 @@
 >
 >
 > The basic building block for the linked list implementation is the node. Each node object must hold at least two pieces of information. First, the node must contain the list item itself. We will call this the data field of the node. In addition, each node must hold a reference to the next node. The starting node of a linked list is referred to as the **head**.
-> ![Alt text](../Linked_list/pic/linked list.png)
+> ![Alt text](/Users/apple/Desktop/Data-Structures/Linked_list/pic/linked list.png)
 >
 >## Types of Linked Lists
 >
