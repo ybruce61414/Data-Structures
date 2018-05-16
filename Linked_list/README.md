@@ -37,6 +37,7 @@
 - <https://www.studytonight.com/data-structures/linked-list-vs-array>
 - [Problem Solving with Algorithms and Data Structures using Python](http://interactivepython.org/runestone/static/pythonds/BasicDS/ImplementinganUnorderedListLinkedLists.html)
 - <https://www.quora.com/What-is-linked-list-1>
+- [Linked lists non-contiguous memory](https://stackoverflow.com/questions/23571432/linked-lists-non-contiguous-memory)
  
   
      
