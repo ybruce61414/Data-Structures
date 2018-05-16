@@ -29,6 +29,7 @@
  - add before & after node
  - swap two nodes
  - search
+ - size
  - remove
  - reverse
  - rotate
