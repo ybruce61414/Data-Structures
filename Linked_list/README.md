@@ -9,7 +9,7 @@
 
 ## Advantages of Linked Lists
 - They are a dynamic in nature which allocates the memory when required.Linked lists are dynamic data structures. i.e., they can grow or shrink during the execution of a program.
--Linked lists have efficient memory utilization. Memory is allocated whenever it is required and it is de-allocated (removed) when it is no longer needed.
+- Linked lists have efficient memory utilization. Elements may or may not be stored in consecutive memory locations. Memory is allocated whenever it is required and it is de-allocated (removed) when it is no longer needed.
 - Insertion and deletion operations can be easily implemented.
 
 
