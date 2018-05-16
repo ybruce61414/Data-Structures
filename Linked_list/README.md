@@ -1,11 +1,11 @@
  ## What is a Linked List?
 
-  Linked list is a dynamic linear data structure where each element (node) is a separate object with its own memory allocation connected to the other objects via pointers.. 
+  Linked list is a dynamic linear data structure where each element (node) is a separate object with its own memory allocation connected to the other objects via pointers.
 
 
  The basic building block for the linked list implementation is the node. Each node object must hold at least two pieces of information. First, the node must contain the list item itself. We will call this the data field of the node. In addition, each node must hold the reference to the next node. The starting node of a linked list is referred to as the **head**.
  
- ![Alt text](pic/linkedlist.png)
+ ![Alt singly linked list](pic/linkedlist.png)
 
 ## Advantages of Linked Lists
 - They are a dynamic in nature which allocates the memory when required.
