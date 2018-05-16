@@ -11,11 +11,11 @@
 - They are a dynamic in nature which allocates the memory when required.
 - They have efficient memory utilization.
 - They can grow and shrink during run time.
-- Insertion and deletion operations can be easily implemented.
+- Insertion and deletion operations can be easily implemented (time complexity: **O(1)**).
 
 ## Disadvantages of linked lists
 - Extra memory is required for a pointer holding the reference to the next node.
-- No element can be accessed randomly; it has to access each node sequentially (time complexity is O(n)).
+- No element can be accessed randomly; it has to access each node sequentially (time complexity: **O(n)**).
 - Reverse Traversing is difficult in linked list.
 
 ## Types of Linked Lists
