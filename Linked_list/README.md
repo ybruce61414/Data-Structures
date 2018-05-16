@@ -24,5 +24,13 @@
  2.   circular linked list 
  3.   doubly linked list
  
+ ## Basic Operations on Linked Lists 
+ - append & prepend
+ - add before & after node
+ - swap two nodes
+ - search
+ - remove
+ - reverse
+ - rotate
   
      
