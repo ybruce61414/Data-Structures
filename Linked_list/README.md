@@ -15,7 +15,7 @@
 
 ## Disadvantages of linked lists
 - Extra memory is required for a pointer holding the reference to the next node.
-- No element can be accessed randomly; it has to access each node sequentially.
+- No element can be accessed randomly; it has to access each node sequentially (time complexity is O(n)).
 - Reverse Traversing is difficult in linked list.
 
 ## Types of Linked Lists
