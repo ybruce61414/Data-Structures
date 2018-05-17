@@ -37,7 +37,7 @@
  - reverse
  - rotate
  
-### Additional Resources
+### Additional Resources & Reference
 ---
 - <https://www.studytonight.com/data-structures/linked-list-vs-array>
 - [Problem Solving with Algorithms and Data Structures using Python](http://interactivepython.org/runestone/static/pythonds/BasicDS/ImplementinganUnorderedListLinkedLists.html)
