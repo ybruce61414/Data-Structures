@@ -4,8 +4,11 @@
 
 
  The basic building block for the linked list implementation is the node. Each node object must hold at least two pieces of information. First, the node must contain the list item itself. We will call this the data field of the node. In addition, each node must hold the reference to the next node. The starting node of a linked list is referred to as the **head**.
- 
+  
  ![Alt singly linked list](pic/linkedlist.png)
+
+
+The operations that we will implement?`size`, `search`, and `remove`?are all based on a technique known as **linked list traversal**. Traversal refers to the process of visiting each node. To do this we use an external reference (called `current` and is initialized to the head of the list ) that starts at the first node in the list. As we visit each node, we move the reference to the next node by ?traversing? the next reference.
 
 ## Advantages of Linked Lists
 - They are a dynamic in nature which allocates the memory when required.
