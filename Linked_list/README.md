@@ -2,6 +2,19 @@
  In this section, we will demonstrate how to construct three types of linked lists and how to implement the methods of basic operations on linked lists. To come close to daily application, we let the basic element for the linked list, the **node** object, be the class `student` as shown below.
  
  
+ ```python
+class student():
+    def __init__(self,name,number,math,eng):
+        self.name = name
+        self.math = math
+        self.eng = eng
+        self.no = number
+        self.next = None
+
+    def __str__(self):
+        return "NO.%d: %s\tMath: %d\tEnglish: %d" % (self.no,self.name,self.math,self.eng)
+```
+ 
  ## What is a Linked List?
 
   Linked list is a dynamic linear data structure where each element (node) is a separate object with its own memory allocation connected to the other objects via pointers.
