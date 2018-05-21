@@ -1,5 +1,5 @@
-## Demonstration
- In this section, we will demonstrate how to construct three types of linked lists and how to implement the methods of basic operations on linked lists. To come close to daily application, we let the basic element for the linked list, the **node** object, be the class `student` in our source code examples as shown below. Each node represents the information of a student's transcript with its name, number, Math score and English score.
+## Overview
+ In this section, we will demonstrate how to construct three types of linked lists and how to implement the methods of basic operations on linked lists. To come close to daily application, we let the basic element for the linked list, the **node** object, be the class `student` in our source code examples as shown below. Each node represents the information of a student's transcript with his name, number, Math score and English score.
  
  ```python
 class student():
