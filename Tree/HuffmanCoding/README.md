@@ -5,7 +5,7 @@ In this project, we will demonstrate how to compress and decompress a text file 
 The project is divided into three main parts:
 
  1.  Constructing Huffman code ( [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)):
-       This part will show you how to build a Huffman tree from input characters, and assign Huffman codes to characters by traversing the Huffman tree. 
+    *  This part will show you how to build a **Huffman tree** from input characters, and assign **Huffman codes** to each character by traversing the Huffman tree. 
  2.   Encoding the file ([main_encode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_encode.ipynb)) 
  3.  Decoding the file ([main_decode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_decode.ipynb))
 
