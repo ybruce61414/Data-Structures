@@ -32,7 +32,7 @@ class student():
 - They can grow and shrink during run time.
 - Insertion and deletion operations can be easily implemented (time complexity: **O(1)**).
 
-## Disadvantages of linked lists
+## Disadvantages of Linked Lists
 - Extra memory is required for a pointer holding the reference to the next node.
 - No element can be accessed randomly; it has to access each node sequentially (time complexity: **O(n)**).
 - Reverse traversing is difficult in linked list.
