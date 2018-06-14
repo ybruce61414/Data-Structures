@@ -18,6 +18,8 @@ Normally, each character in a text file is stored in eight bits using an encodin
 
  ## How to generate Huffman code ?
  
+ to  
+ 
  ![Alt Huffman tree](pic/huffman tree.png) 
  
  
