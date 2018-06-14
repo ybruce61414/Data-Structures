@@ -17,7 +17,10 @@ Huffman coding is a lossless data compression algorithm. The idea is to assign v
 Normally, each character in a text file is stored in eight bits using an encoding called ASCII. A Huffman-encoded file breaks down the rigid 8-bit structure so that the most commonly used characters are stored in just a few bits ('a' could be "10" or "1000" rather than the ASCII, which is "01100001").  However, the least common characters will take up more than 8 bits ('z' might be "00100011010") in some rare situations. Huffman encoding, on the whole, creates a much smaller file than the original one.
 
  ## How to generate Huffman code ?
+ There are mainly two major parts in generating Huffman code:
  
+1.  Build a Huffman tree from input characters.
+2.  Traverse the Huffman tree and assign codes to characters.
  ![Alt Huffman tree](pic/huffman_tree.png)
  
  
