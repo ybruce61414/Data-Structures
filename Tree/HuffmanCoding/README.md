@@ -3,7 +3,7 @@
 In this project, we will demonstrate how to compress and decompress a text file using Huffman coding. The project is divided into three main parts:
 
  1.  **Constructing Huffman code** ( [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)):
-          This part will show you how to build a **Huffman tree** from input characters, and generate Huffman codes by traversing the Huffman tree. 
+     * This part will show you how to build a **Huffman tree** from input characters, and generate Huffman codes by traversing the Huffman tree. 
  2.  **Encoding the file** ([main_encode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_encode.ipynb)):
         This part will demonstrate how to encode the text into Huffman string, and save it as binary file in ASCII hex format. 
   
