@@ -23,13 +23,13 @@ Normally, each character in a text file is stored in eight bits using an encodin
 2.  Traverse the Huffman tree and assign codes to characters.
  ![Alt Huffman tree](pic/huffman_tree.png)
  
- **Step for building Huffman tree**
+ **Step for building a Huffman tree**
  
  - Count the frequency of each character.  
    ```python
    {'A':10, 'B':5, 'C':7, 'D':15, 'E':20, 'F':45}
    ``` 
-   
+ -  Extract two nodes with the minimum frequency, and create a parent node with a frequency that is the sum of the two lowest character's frequencies. Do this successively until there is only one node which all others spring from.
  
  
  
