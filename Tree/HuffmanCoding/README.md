@@ -40,7 +40,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
  - Append a **0** for each time you take the **left branch**, and a **1** for each time you take the **right branch**. Print the code word when a leaf node is encountered.
  - Obtain the Huffman code.
     ```python
-   {'A':000, 'B':0010, 'C':0011, 'D':010, 'E':011, 'F':1}
+   {'A':'000', 'B':'0010', 'C':'0011', 'D':'010', 'E':'011', 'F':'1'}
    ``` 
 
  
