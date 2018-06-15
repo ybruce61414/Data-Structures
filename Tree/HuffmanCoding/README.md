@@ -30,7 +30,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
    {'A':10, 'B':5, 'C':7, 'D':15, 'E':20, 'F':45}
    ``` 
  -  Extract two nodes with the minimum frequencies.
- -  Create a **parent node** with a frequency that is the sum of the two lowest character's frequencies, and make the first extracted node as its **left child** and the other as its **right child**. 
+ -  Create a **parent node** with a frequency that is the sum of the two lowest character's frequencies, and make the first extracted node as its **left child** and the other as its **right child**.  
  Do the above two steps successively until there is only one node which all others spring from.
  - The Huffman tree is complete.
  
