@@ -31,8 +31,23 @@ Normally, each character in a text file is stored in eight bits using an encodin
    ``` 
  -  Extract two nodes with the minimum frequencies.
  -  Create a **parent node** with a frequency that is the sum of the extracted nodes' frequencies, and make the first extracted node as its **left child** and the other as its **right child**.
- - Do the above two steps successively until there is only one node which all others spring from.
+ - Do the above two steps successively until there is only one node which all others spring from, and which is the root of the tree.
  - The Huffman tree is complete.
+ 
+ **Step for assigning codes from Huffman Tree**
+ 
+ - Traverse the tree to reach each leaf node(character) from the root.
+ - Append a **0** for each time you take the **left branch**, and a **1** for each time you take the **right branch**. Print the code word when a leaf node is encountered.
+ - Obtain the Huffman code.
+    ```python
+   {'A':000, 'B':0010, 'C':0011, 'D':010, 'E':011, 'F':1}
+   ``` 
+
+ 
+ 
+ 
+ 
+ 
  
  
  
