@@ -56,7 +56,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
    
     def __repr__(self):
             return '(node object %s:%d)' % (self.cha,self.freq)
-    ``` 
+ ``` 
  
  
  
