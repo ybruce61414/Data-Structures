@@ -21,7 +21,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
  
 1.  Build a Huffman tree from input characters.
 2.  Traverse the Huffman tree and assign codes to characters.
- ![Alt Huffman tree](pic/huffman_tree.png)
+ ![Alt Huffman tree](image/huffman_tree.png)
  
  **Step for building a Huffman tree**
  
@@ -38,14 +38,25 @@ Normally, each character in a text file is stored in eight bits using an encodin
  
  - Traverse the tree to reach each leaf node(character) from the root.
  - Append a **0** for each time you take the **left branch**, and a **1** for each time you take the **right branch**. Print the code word when a leaf node is encountered.
- - Obtain the Huffman code.
+ - The Huffman code is obtained.
     ```python
    {'A':'000', 'B':'0010', 'C':'0011', 'D':'010', 'E':'011', 'F':'1'}
    ``` 
-
+   
+ ## Part 1: Constructing Huffman code
+ Firstly, we let the basic element be the class `Huffman_node` to store the input characters and its corresponding frequency, and define the `repr()` method to print out the status of the nodes. 
  
- 
- 
+ ```python
+ class Huffman_node():
+    def __init__(self,cha,freq):
+        self.cha = cha
+        self.freq = freq
+        self.Lchild = None
+        self.Rchild = None
+   
+    def __repr__(self):
+            return '(node object %s:%d)' % (self.cha,self.freq)
+    ``` 
  
  
  
