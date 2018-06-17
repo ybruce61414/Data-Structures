@@ -1,4 +1,4 @@
-# Huffman Coding with Python
+# Huffman Coding - Python Implementation
 ## Project Description
 In this project, we will demonstrate how to compress and decompress a text file using Huffman coding. The project is divided into three main parts:
 
@@ -30,7 +30,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
    {'A':10, 'B':5, 'C':7, 'D':15, 'E':20, 'F':45}
    ``` 
  -  Extract two nodes with the minimum frequencies.
- -  Create a **parent node** with a frequency that is the sum of the extracted nodes' frequencies, and make the first extracted node as its **left child** and the other as its **right child**.
+ -  Create a **parent node** with a frequency that is the sum of the two extracted nodes' frequencies, and make the first extracted node as it's **left child** and the other as it's **right child**.
  - Do the above two steps successively until there is only one node which all others spring from, and which is the root of the tree.
  - The Huffman tree is complete.
  
@@ -44,7 +44,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
    ``` 
    
  ## Part 1: Constructing Huffman code
- Firstly, we let the basic element be the class `Huffman_node` to store the input characters and its corresponding frequency, and define the `repr()` method to print out the status of the nodes. 
+ Firstly, we let the basic element be the class `Huffman_node` to store the **input characters** and its corresponding **frequencies**, and define the `repr()` method to print out the status of the nodes. 
  
  ```python
  class Huffman_node():
@@ -57,6 +57,110 @@ Normally, each character in a text file is stored in eight bits using an encodin
     def __repr__(self):
             return '(node object %s:%d)' % (self.cha,self.freq)
  ``` 
+ Secondly we create the class `HuffmanCoding`  to generate the tree and Huffman code. The source code is as below:
+ 
+ ```python
+ class HuffmanCoding():
+    def __init__(self,text):
+        self.root = None
+        self.text = text
+        self.nodedic = {}
+        self.huffcodes = {}
+        self.encodes = []
+        self.decodes = []
+                
+    #----------- generating huffman tree -----------   
+    def generate_tree(self):
+        self.generate_node() 
+        while len(self.nodedic) != 1:
+            min_node1 = self.find_minNode()
+            min_node2 = self.find_minNode()
+            self.root = self.merge_nodes(min_node1,min_node2)
+        return self.root              
+        
+    #---- function set for generating huffman tree -----
+    def character_freq(self):
+        #generate dic-{cha:freq}
+        count = {}
+        for cha in self.text:
+            count.setdefault(cha,0)
+            count[cha] += 1
+        return count     
+
+    def generate_node(self):
+        #generate dic-{freq:node}
+        c = self.character_freq()
+        #storing each cha & freq into huffmanNode
+        for k,v in c.items():
+            newnode = Huffman_node(k,v)
+            #multiple value for the same key
+            #dic-{key:[ob1,ob2..]}
+            self.nodedic.setdefault(v,[]).append(newnode)
+        return self.nodedic
+    
+    def find_minNode(self):
+        keys = list(self.nodedic.keys())
+        minkey, minlist = keys[0], self.nodedic[keys[0]]
+        for k,v in self.nodedic.items():
+            if minkey > k:
+                minkey,minlist = k,v
+        minvalue = minlist.pop(0)
+        if not minlist:
+            #empty list,delete the minNode from dic
+            del self.nodedic[minkey]    
+        #return minNode object
+        return minvalue 
+    
+    def merge_nodes(self,min1,min2):
+        newnode = Huffman_node(min1.cha + min2.cha,min1.freq + min2.freq)
+        newnode.Lchild,newnode.Rchild = min1,min2
+        #adding newnode into self.nodedic
+        self.nodedic.setdefault(min1.freq + min2.freq,[]).append(newnode) 
+        return newnode
+    
+    #----------generating huffman code-----------
+    def generate_huffcode(self):
+        code = ''
+        if self.root != None:
+            return self.rec_generate_huffcode(self.root,code)         
+            
+    def rec_generate_huffcode(self,cur_node,codestr):
+        if not cur_node.Lchild and not cur_node.Rchild:
+            self.huffcodes[cur_node.cha] = codestr  
+        if cur_node.Lchild:
+            self.rec_generate_huffcode(cur_node.Lchild,codestr + '0')
+        if cur_node.Rchild:
+            self.rec_generate_huffcode(cur_node.Rchild,codestr + '1')
+         
+    #-----------------compression-------------------
+    def encode(self):
+        for cha in self.text:
+            self.encodes.append(self.huffcodes[cha])
+        #strings in list merge into one string    
+        self.encodes = ''.join(self.encodes)
+        #turn encodes into string
+        return self.encodes     
+        
+    #----------------decompression------------------
+    def decode(self):
+        temp_str,temp_dic = '',{}
+        #reverse huffcodes
+        for k,v in self.huffcodes.items():
+            temp_dic[v] = k
+        
+        for binary_code in self.encodes:
+            temp_str += binary_code
+            if temp_str in temp_dic.keys():
+                self.decodes.append(temp_dic[temp_str])
+                temp_str = ''
+        self.decodes = ''.join(self.decodes)         
+        return self.decodes 
+ ```        
+ 
+ 
+ 
+ 
+ 
  
  
  
