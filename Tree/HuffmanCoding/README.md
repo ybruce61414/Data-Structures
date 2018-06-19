@@ -160,7 +160,151 @@ Normally, each character in a text file is stored in eight bits using an encodin
  ```        
  
  ## Part 2: Encoding the file
+ ```python
+ def main_encode(file_path):
+    import os
+    #----------read sample file-------------
+    sample_file = open(file_path,'r')
+    sample_content = sample_file.read()  
+    samplesize = os.path.getsize(file_path)
+    
+    #-------generate huffman tree---------
+    a = HuffmanCoding(sample_content)
+    a.generate_tree()
+    a.generate_huffcode()
+    #ee is encoded binary string
+    ee = a.encode() 
+    
+    def cluster_byte(string):
+        #8 bits for 1 group(byte)
+        string_add,s_list,temp_list = string,[],[]
+        if len(string)%8 != 0:
+            for i in range(8-len(string)%8):
+                string_add += '0'
+                
+        for i in string_add:
+            temp_list.append(i)
+            if len(temp_list) == 4:
+                s_list.append(''.join(temp_list)+' ')
+                temp_list = []
+        return ''.join(s_list)     
+
+    def calculate_0padding(string):
+        #how many 0 paddings added into ee
+        if len(string)%8 == 0:
+            return print('Zero Paddings:\t%d' %(0))
+        else:
+            return print('Zero Paddings:\t%d' %(8-len(string)%8))
+                   
+    #we need to save string representation into real binary
+    dirname = os.path.dirname(file_path)
+    basename = 'encode_sample.bin'
+    
+    #--------save file in hex format------------
+    import bitstring as bit
+    bins = bit.BitArray('0b '+ cluster_byte(ee))
+    with open('/'.join([dirname,basename]), 'wb') as encode_file:
+        encode_file.write(bins.tobytes())
+    encodesize = os.path.getsize('/'.join([dirname,basename]))
+    
+    #-------save huffmancode dic file-----------
+    basename_huff = 'encode_sample_huff.txt'
+    with open('/'.join([dirname,basename_huff]), 'w') as encode_huff:
+        encode_huff.write(str(a.huffcodes))   
+    
+    #----------------print data-----------------
+    s1, s2 = 'encoded file: ','huffman code file: '
+    print(s1.ljust(20,' ') +'/'.join([dirname,basename]))
+    print(s2.ljust(20,' ')+ '/'.join([dirname,basename_huff])+'\n')
+    calculate_0padding(ee) 
+    
+    #byte to kb/mb/gb
+    for i in [samplesize,encodesize]:
+        if 1024> i:
+            sizebyte = i                        # bytes
+            print('\n '+str(sizebyte)+'\tbytes')
+            
+        if 1024*1024> i > 1024:
+            sizekb = i/1024                     # Kb
+            print('\n '+str(sizekb)+'\tKB')
+            
+        elif 1024*1024*1024> i > 1024*1024:
+            sizemb = i/(1024*1024)              # Mb    
+            print('\n '+str(sizemb)+'\tMB')
+
+        elif 1024*1024*1024*1024> i > 1024*1024*1024:
+            sizegb = i/(1024*1024*1024)         # Gb            
+            print('\n '+str(sizegb)+'\tGB')
+    
+    print('\nCompression Ratio: '+ 
+          str(round((samplesize-encodesize)/samplesize*100,2))+'%') 
+```
  
+ ## Part 3: Decoding the file
+ ```python
+ def main_decode(bin_path,huff_path,padding):
+    #-----------------------------------------
+    #decimal to any base conversion
+    def BaseConverter(decnumber,base):
+        digits = "0123456789ABCDEF"
+        remstack = []
+        if decnumber == 0:
+            return '00000000'
+        else:
+            while decnumber > 0:
+                rem = decnumber % base
+                remstack.append(rem)
+                decnumber = decnumber // base
+        
+            binstring = ""
+            while remstack:
+                binstring = binstring + digits[remstack.pop()]
+    
+            string_add = list(binstring) 
+            if len(binstring)%8 != 0:
+                for i in range(8-len(binstring)%8):
+                    string_add.insert(0,'0')
+            string_add = ''.join(string_add)            
+            return string_add        
+    #--------------read encode_file-----------------
+    with open(bin_path, 'rb') as decode_file:
+        hexData = decode_file.read()
+    
+    #ASCII Char with hex convert to Decimal
+    hextobin_list = list(hexData)
+    
+    #decimal to binary conversion
+    decode_list = []
+    for decimal in hextobin_list:
+        decode_list.append(BaseConverter(decimal,2))
+    #exclude 0 padding term from string    
+    if padding == 0:
+        decode_str = ''.join(decode_list)
+    else:    
+        decode_str = ''.join(decode_list)[0:-1*padding]
+
+    #--------read huffcode dictionary file --------
+    with open(huff_path, 'rb') as decode_huff:
+        huffData = decode_huff.read()    
+    import yaml
+    huffcode_dic = yaml.load(huffData)
+    #print(hextobin_list)
+    #return huffcode_dic
+    
+    #-------------------decode---------------------
+    temp_str,temp_list,temp_dic = '',[],{}
+    #reverse huffcodes
+    for k,v in huffcode_dic.items():
+        temp_dic[v] = k
+        
+    for binary_code in decode_str:
+        temp_str += binary_code
+        if temp_str in temp_dic.keys():
+            temp_list.append(temp_dic[temp_str])
+            temp_str = ''
+    temp_list = ''.join(temp_list)         
+    return temp_list
+ ```   
  
  
  
