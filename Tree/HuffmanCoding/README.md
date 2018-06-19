@@ -43,7 +43,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
    {'A':'000', 'B':'0010', 'C':'0011', 'D':'010', 'E':'011', 'F':'1'}
    ``` 
    
- ## Part 1: Constructing Huffman code
+ ## Brief look at Constructing Huffman code
  Firstly, we let the basic element be the class `Huffman_node()` to store the **input characters** and its corresponding **frequencies**, and define the `repr()` method to print out the status of the nodes. 
  
  ```python
@@ -105,7 +105,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
          
   ```        
  
- ## Part 2&3: Usage 
+ ## Usage 
  
  
  
