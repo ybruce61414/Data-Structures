@@ -5,7 +5,7 @@ In this project, we will demonstrate how to compress and decompress a text file 
  1.  **Constructing Huffman code** ( [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)):
      * This part will show you how to build a **Huffman tree** from input characters, and generate Huffman codes by traversing the Huffman tree. 
  2.  **Encoding the file** ([main_encode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_encode.ipynb)):
-      * This part will demonstrate how to encode the text into Huffman string, and save it as binary file in ASCII hex format. 
+      * This part will demonstrate how to encode the text into Huffman string, and save it as binary file in [ASCII](https://www.eso.org/~ndelmott/ascii.html) hex format. 
   
  3.  **Decoding the file** ([main_decode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_decode.ipynb)):
      * This part will demonstrate how to decode the binary file, and convert it into text data with Huffman code of each character.  
@@ -44,7 +44,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
    ``` 
    
  ## Part 1: Constructing Huffman code
- Firstly, we let the basic element be the class `Huffman_node` to store the **input characters** and its corresponding **frequencies**, and define the `repr()` method to print out the status of the nodes. 
+ Firstly, we let the basic element be the class `Huffman_node()` to store the **input characters** and its corresponding **frequencies**, and define the `repr()` method to print out the status of the nodes. 
  
  ```python
  class Huffman_node():
@@ -57,9 +57,11 @@ Normally, each character in a text file is stored in eight bits using an encodin
     def __repr__(self):
             return '(node object %s:%d)' % (self.cha,self.freq)
  ``` 
- Secondly we create the class `HuffmanCoding`  to generate the tree and Huffman code. The source code is as below:
+ Secondly we create the class `HuffmanCoding()` to generate the tree and Huffman code. 
  
- ```python
+ 
+ The attribute `self.root` stores the **root node** of the Huffman tree; `self.text` stores the **input text** in string;  `self.nodedic` stores **frequency-node pair** in dictionary; `self.huffcodes` stores **character-codeword pair** in dictionary; `self.encodes` stores the **encoded binary string** in list, and `self.decodes` stores the **decoded text string** in list.
+ ```python 
  class HuffmanCoding():
     def __init__(self,text):
         self.root = None
@@ -157,6 +159,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
         return self.decodes 
  ```        
  
+ ## Part 2: Encoding the file
  
  
  
