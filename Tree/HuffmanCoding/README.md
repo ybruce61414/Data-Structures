@@ -3,9 +3,9 @@
 In this project, we will demonstrate how to compress and decompress a text file using Huffman coding. The project is divided into three main parts:
 
  1.  **Constructing Huffman code** ( [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)):
-     * Show you how to build a **Huffman tree** from input characters, and generate Huffman codes by traversing the Huffman tree. 
+     * Show how to build a **Huffman tree** from input characters, and generate **Huffman codes** by traversing the Huffman tree. 
  2.  **Encoding the file** ([main_encode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_encode.ipynb)):
-      * Demonstrate how to encode the text into Huffman string, and save it as binary file in [ASCII](https://www.eso.org/~ndelmott/ascii.html) hex format. 
+      * Demonstrate how to encode the text into Huffman string(binary sequence), and save it as binary file in [ASCII](https://www.eso.org/~ndelmott/ascii.html) hex format. 
   
  3.  **Decoding the file** ([main_decode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_decode.ipynb)):
      * Demonstrate how to decode the binary file using decimal to binary converter, and convert it into text data via the Huffman code.  
@@ -44,7 +44,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
    ``` 
    
  ## Brief look at Constructing Huffman code
- Firstly, we let the basic element be the class `Huffman_node()` to store the **input characters** and its corresponding **frequencies**, and define the `repr()` method to print out the status of the nodes. 
+ In this section, we briefly introduce our method to produce the tree and Huffman code with main parts of our code. Firstly, we let the basic element be the class `Huffman_node()` to store the **input characters** and its corresponding **frequencies**, and define the `repr()` method to print out the status of the nodes. 
  
  ```python
  class Huffman_node():
@@ -57,7 +57,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
     def __repr__(self):
             return '(node object %s:%d)' % (self.cha,self.freq)
  ``` 
- Secondly, to generate the tree and Huffman code, we create the class `HuffmanCoding()` . Here we show the main parts of the source code( [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)) involving generating Huffman tree and Huffman code below.
+ Secondly, we create the class `HuffmanCoding()`. Here are the main parts of the source code( [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)) involving generating Huffman tree and Huffman code below.
  
  The attribute of the class `self.root` stores the **root node** of the Huffman tree; `self.text` stores the **input text** in string;  `self.nodedic` stores **frequency-node pair** in dictionary; `self.huffcodes` stores **character-codeword pair**, which is the **Huffman code**, in dictionary; `self.encodes` stores the **encoded binary string** in list, and `self.decodes` stores the **decoded text string** in list.
  ```python 
@@ -104,10 +104,10 @@ Normally, each character in a text file is stored in eight bits using an encodin
   ```        
  
  ## Usage 
- - Save the code we mentioned above.  
- [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)  
- [main_encode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_encode.ipynb)  
- [main_decode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_decode.ipynb)
+ - Save the code we mentioned above in python.  
+ [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)/ [main_encode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_encode.ipynb)/ [main_decode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_decode.ipynb)
+ 
+ - Create a sample text file, or download a sample file from [sample.txt](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/sample.txt) 
    
  
  
