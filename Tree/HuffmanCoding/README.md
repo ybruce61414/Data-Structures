@@ -107,8 +107,15 @@ Normally, each character in a text file is stored in eight bits using an encodin
  - Save the code we mentioned above in python.  
  [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)/ [main_encode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_encode.ipynb)/ [main_decode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_decode.ipynb)
  
- - Create a sample text file, or download a sample file from [sample.txt](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/sample.txt) 
-   
+ - Create a sample text file, or download a sample file from [sample.txt](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/sample.txt).
+ 
+ - Execute the program
+   - **main_encode(file_path)**  
+   ---  
+   Input:     path of sample.txt  
+   Output:  [path of encoded file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample.bin)/ [path of huffman code file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample_huff.txt)  
+                 Zero Paddings: 1  
+                 Compression Ratio: 42.76%    
  
  
  
