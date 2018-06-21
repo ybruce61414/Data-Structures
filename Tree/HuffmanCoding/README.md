@@ -110,12 +110,10 @@ Normally, each character in a text file is stored in eight bits using an encodin
  - Create a sample text file, or download a sample file from [sample.txt](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/sample.txt).
  
  - Execute the program
-   - **main_encode(file_path)**  
    ---  
+   - **main_encode(file_path)**  
    Input:     path of sample.txt  
-   Output:  [path of encoded file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample.bin)/ [path of huffman code file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample_huff.txt)  
-                 Zero Paddings: 1  
-                 Compression Ratio: 42.76%    
+   Output:  [path of encoded file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample.bin)/ [path of huffman code file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample_huff.txt)/ Zero Paddings: 1/ Compression Ratio: 42.76%    
  
  
  
