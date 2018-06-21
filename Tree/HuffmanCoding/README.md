@@ -123,9 +123,12 @@ Normally, each character in a text file is stored in eight bits using an encodin
    
  ## Result
  
- Initial file size | 2.197265625	KB
------------- | -------------
-Compressed file Size | 1.2578125	KB
+ File           | Size  
+--------------|------------------------
+Initial file    | 2.197265625	KB
+Compressed file  | 1.2578125	KB
+ 
+ 
  
 
  
