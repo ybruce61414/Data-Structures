@@ -104,7 +104,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
   ```        
  
  ## Usage 
- - Save the code we mentioned above in python.  
+ - Save the code we mentioned above in the same directory.  
  [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)/ [main_encode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_encode.ipynb)/ [main_decode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_decode.ipynb)
  
  - Create a sample text file, or download a sample file from [sample.txt](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/sample.txt).
@@ -113,10 +113,10 @@ Normally, each character in a text file is stored in eight bits using an encodin
    ---  
    - **main_encode(file_path):**  
    *Input:*  [sample.txt](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/sample.txt)  
-   *Output:*  [encoded file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample.bin)**/** [huffman code file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample_huff.txt)**/** Zero Paddings: 1**/** Compression Ratio: 42.76%    
+   *Output:*  [encoded file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample.bin) **/** [huffman code file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample_huff.txt) **/** Zero Paddings: 1 **/** Compression Ratio: 42.76%    
    
    - **main_decode(bin_path,huff_path,padding):**  
-   *Input:*  [encode_sample.bin](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample.bin)/ [encode_sample_huff.txt](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample_huff.txt)/ padding: 1  
+   *Input:*  [encode_sample.bin](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample.bin) **/** [encode_sample_huff.txt](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample_huff.txt) **/** padding: 1  
    *Output:*  Text data same as sample.txt (check it from [main_decode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_decode.ipynb))
 
  
