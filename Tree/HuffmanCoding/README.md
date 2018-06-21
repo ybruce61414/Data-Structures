@@ -113,11 +113,13 @@ Normally, each character in a text file is stored in eight bits using an encodin
    ---  
    - **main_encode(file_path):**  
    *Input:*  [sample.txt](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/sample.txt)  
-   *Output:*  [encoded file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample.bin) **/** [huffman code file](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample_huff.txt) **/** Zero Paddings: 1 **/** Compression Ratio: 42.76%    
+   *Output:*  [encode_sample.bin](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample.bin) **/** [encode_sample_huff.txt](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample_huff.txt) **/** Zero Paddings: 1 **/** Compression Ratio: 42.76%    
    
    - **main_decode(bin_path,huff_path,padding):**  
    *Input:*  [encode_sample.bin](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample.bin) **/** [encode_sample_huff.txt](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/sample%20/encode_sample_huff.txt) **/** padding: 1  
    *Output:*  Text data same as sample.txt (check it from [main_decode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/main_decode.ipynb))
+   
+   The encoded file(encode_sample.bin) is stored as bytes (8 bits or 8 binary digits). Because the Huffman Encoding algorithm doesn't use the 8-bit format, the encoded file will often not have lengths that are multiples of 8. The remaining digits will be filled in with 0s. In this case, one 0s would be added at the end of the file.
 
  
  
