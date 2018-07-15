@@ -70,7 +70,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
         self.encodes = []
         self.decodes = []
                 
-    #-------------- generating huffman tree --------------   
+    #-------------- generating huffman tree -------------   
     def generate_tree(self):
         self.generate_node() 
         while len(self.nodedic) != 1:
