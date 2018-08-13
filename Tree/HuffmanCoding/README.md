@@ -57,7 +57,7 @@ Normally, each character in a text file is stored in eight bits using an encodin
     def __repr__(self):
             return '(node object %s:%d)' % (self.cha,self.freq)
  ``` 
- Secondly, we create the class `HuffmanCoding()`. Here are the main parts of the source code( [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)) involving generating Huffman tree and Huffman code below.
+ Secondly, we create the class `HuffmanCoding()`. Here are the main source code( [HuffmanCode.ipynb](https://github.com/ybruce61414/Data-Structures/blob/master/Tree/HuffmanCoding/HuffmanCode.ipynb)) snippet involving generating Huffman tree and Huffman code below.
  
  We define the class that has 6 attributes: `self.root` stores the **root node** of the Huffman tree; `self.text` stores the **input text** in string;  `self.nodedic` stores **frequency-node pair** in dictionary; `self.huffcodes` stores **character-codeword pair**, which is the **Huffman code**, in dictionary; `self.encodes` stores the **encoded binary string** in list, and `self.decodes` stores the **decoded text string** in list.
  ```python 
